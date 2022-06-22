@@ -161,4 +161,8 @@ public class EmployeServiceImpl implements IEmployeService {
 		return (List<Employe>) employeRepository.findAll();
 	}
 
+	public static String getHello(){
+	return "hello world";
+	}
+
 }
