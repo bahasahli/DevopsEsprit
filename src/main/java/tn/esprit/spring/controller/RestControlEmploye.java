@@ -67,7 +67,7 @@ public class RestControlEmploye {
 	// http://localhost:8081/SpringMVC/servlet/ajouterContrat
 	@PostMapping("/ajouterContrat")
 	@ResponseBody
-	public int ajouterContrat(@RequestBody Contrat contrat) {
+	public Long ajouterContrat(@RequestBody Contrat contrat) {
 		iemployeservice.ajouterContrat(contrat);
 		return contrat.getReference();
 	}

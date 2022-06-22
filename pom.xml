@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>tn.esprit</groupId>
 	<artifactId>Timesheet-devops</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>Timesheet-devops</name>
 	<description>Timesheet-devops</description>
@@ -35,6 +35,61 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.1.1</version>
+    <exclusions>
+        <exclusion>
+            <artifactId>*</artifactId>
+            <groupId>*</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.1.1</version>
+    <exclusions>
+        <exclusion>
+            <artifactId>*</artifactId>
+            <groupId>*</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-commons</artifactId>
+    <version>1.1.1</version>
+    <exclusions>
+        <exclusion>
+            <artifactId>*</artifactId>
+            <groupId>*</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-engine</artifactId>
+    <version>1.1.1</version>
+    <exclusions>
+        <exclusion>
+            <artifactId>*</artifactId>
+            <groupId>*</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-launcher</artifactId>
+    <version>1.1.1</version>
+    <exclusions>
+        <exclusion>
+            <artifactId>*</artifactId>
+            <groupId>*</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>

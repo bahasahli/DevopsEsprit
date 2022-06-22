@@ -49,7 +49,7 @@ public class IControllerEmployeImpl  {
 	}
 
 	
-	public int ajouterContrat(Contrat contrat) {
+	public Long ajouterContrat(Contrat contrat) {
 		iemployeservice.ajouterContrat(contrat);
 		return contrat.getReference();
 	}

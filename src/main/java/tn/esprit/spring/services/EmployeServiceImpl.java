@@ -79,13 +79,13 @@ public class EmployeServiceImpl implements IEmployeService {
 		}
 	}
 
-	public int ajouterContrat(Contrat contrat) {
+	public Long ajouterContrat(Contrat contrat) {
 		contratRepoistory.save(contrat);
 		return contrat.getReference();
 	}
 
 	public void affecterContratAEmploye(int contratId, int employeId) {
-		Contrat contratManagedEntity = contratRepoistory.findById(contratId).orElse(null);
+		Contrat contratManagedEntity = contratRepoistory.findById((long) contratId).orElse(null);
 		Employe employeManagedEntity = employeRepository.findById(employeId).orElse(null);
 
 		if (contratManagedEntity != null) {
@@ -116,7 +116,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public void deleteContratById(int contratId) {
-		Contrat contratManagedEntity = contratRepoistory.findById(contratId).orElse(null);
+		Contrat contratManagedEntity = contratRepoistory.findById((long) contratId).orElse(null);
 		if (contratManagedEntity != null) {
 			contratRepoistory.delete(contratManagedEntity);
 		}

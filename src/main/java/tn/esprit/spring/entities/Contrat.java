@@ -18,7 +18,7 @@ public class Contrat implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int reference;
+	private Long reference;
 	
 	@Temporal(TemporalType.DATE)
 	private Date dateDebut;
@@ -49,11 +49,11 @@ public class Contrat implements Serializable {
 		this.dateDebut = dateDebut;
 	}
 
-	public int getReference() {
+	public Long getReference() {
 		return reference;
 	}
 
-	public void setReference(int reference) {
+	public void setReference(Long reference) {
 		this.reference = reference;
 	}
 
